@@ -6,3 +6,5 @@ npm-debug.log
 # cordova stuff
 /platforms
 /plugins
+
+.vscode
