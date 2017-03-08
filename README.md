@@ -1,5 +1,9 @@
 # vue-cordova-demo
 
+使用vue-router管理页面路由
+
+https://cordova.apache.org/docs/en/latest/
+
 **Install NPM dependencies and build static files**
 
 ``` bash
@@ -18,6 +22,3 @@ npm run ios
 npm run browser
 ```
 
-``` bash
-npm run check
-```

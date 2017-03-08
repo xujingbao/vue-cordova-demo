@@ -1,9 +1,12 @@
 <template>
   <div id="app">
+    <router-link class="page-back" v-if="visible" :to="'/'">
+      <i class="mintui mintui-back"></i>
+    </router-link>
     <router-view></router-view>
-    <mt-tabbar is-fixed v-model="selected">
+    <mt-tabbar fixed v-model="selected">
       <mt-tab-item id="home" @click.native="$router.push('/home')">
-        <i class="iconfont icon-waimai" slot="icon"></i> 首页
+        <img slot="icon" src="./assets/100x100.png"> 首页
       </mt-tab-item>
       <mt-tab-item id="data" @click.native="$router.push('/data')">
         <img slot="icon" src="./assets/100x100.png"> 数据
@@ -21,8 +24,35 @@
         selected: 'data'
       }
     },
-    methods: {
-
+    computed: {
+      visible () {
+        return ['/', '/header', '/search'].indexOf(this.$route.path) < 0
+      }
     }
   }
 </script>
+<style>
+  @reset-global mobile;
+  html,
+  body {
+    background-color: #fafafa;
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .page-back {
+    display: inline-block;
+    position: absolute 12px * * 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    i {
+      font-size: 24px;
+      line-height: 40px;
+    }
+  }
+</style>

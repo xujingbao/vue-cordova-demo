@@ -25,11 +25,14 @@ if (window.location.protocol === 'file:' || window.location.port === '3000') {
 import home from './home'
 import data from './data'
 import account from './account'
+import detail from './detail'
+
 /**
  *
  */
 const routes = [
   { name: 'home', path: '/home', component: home },
+  { name: 'detail', path: '/detail', component: detail },
   { name: 'data', path: '/data', component: data },
   { name: 'account', path: '/account', component: account }
 ]

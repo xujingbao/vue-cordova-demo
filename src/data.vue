@@ -61,7 +61,6 @@
     },
     data: function () {
       return {
-        selected: 'tab3',
         cordova: Vue.cordova,
         plugins: {
           'cordova-plugin-camera': function () {
